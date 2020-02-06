@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net461</TargetFramework>
@@ -18,6 +18,9 @@
     <CodeAnalysisRuleSet>..\OpenRA.ruleset</CodeAnalysisRuleSet>
     <Configurations>Release;Debug;Release-x86</Configurations>
     <ManagedExeLauncher Condition="('$(OS)' != 'Windows_NT')">mono </ManagedExeLauncher>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\repos\OpenRA\Backup3\</UpgradeBackupLocation>
+    <OldToolsVersion>Current</OldToolsVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- Work around an issue where Rider does not detect files in the project root using the default glob -->
@@ -66,7 +69,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <None Include="App.config" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" /> 
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
     <AdditionalFiles Include="../stylecop.json" />
     <AdditionalFiles Include="Properties/launchSettings.json" />
   </ItemGroup>

@@ -27,6 +27,7 @@ namespace OpenRA
 		[STAThread]
 		static int Main(string[] args)
 		{
+			Console.WriteLine("Game Start");
 			if (Debugger.IsAttached || args.Contains("--just-die"))
 				return (int)Game.InitializeAndRun(args);
 
